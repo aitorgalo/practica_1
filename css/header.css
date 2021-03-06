@@ -1,0 +1,60 @@
+header {
+  display: flex;
+  height: 4.5rem;
+  border-bottom: solid 0.15rem rgb(221, 221, 221);
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+header span {
+  text-align: center;
+}
+
+header input {
+  width: 25%;
+  height: 2rem;
+  color: rgb(94, 94, 94);
+  border: solid 0.1rem rgb(134, 134, 134);
+}
+
+header .item {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.logo
+{
+  font-size: 2rem;
+  padding-left:0.5rem;
+}
+
+header .emojis{
+  font-size:1.5rem;
+}
+
+@media (max-width: 479px) {
+
+  .logo
+  {
+    font-size: 1rem;
+  }
+
+  header {
+height:2rem;
+  }
+
+  .ocultar
+  {
+    display:none;
+  }
+
+  header .emojis{
+    font-size:1rem;
+    text-align:right;
+    padding-right:0.5rem;
+  }
+
+}
+
