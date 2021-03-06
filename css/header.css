@@ -16,7 +16,7 @@ header input {
   width: 25%;
   height: 2rem;
   color: rgb(94, 94, 94);
-  border: solid 0.1rem rgb(134, 134, 134);
+  border: solid 0.1rem rgb(221, 221, 221);
 }
 
 header .item {

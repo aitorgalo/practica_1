@@ -1,0 +1,10 @@
+aside{
+  position: fixed;
+  top: 5rem;
+  right:0;
+  height: 400px;
+  width: 400px;
+  border: solid 0.1rem rgb(221, 221, 221);
+  background-color:white;
+}
+

@@ -6,11 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fakestagram</title>
-  <link rel="shortcut icon" href="img/fa.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="css/general.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/article.css" />
+  <link rel="stylesheet" href="css/aside.css" />
+  <link rel="stylesheet" href="css/footer.css" />
 </head>
 
 <body>
@@ -27,16 +29,16 @@
   </header>
 
   <nav>
-    <div><img class="avatar red_border" src="img/avatar/1.jpg" alt="Avatar 1" /><br>viajante88</div>
-    <div><img class="avatar" src="img/avatar/2.jpg" alt="Avatar 2" /></div>
-    <div><img class="avatar red_border" src="img/avatar/3.jpg" alt="Avatar 3" /></div>
-    <div><img class="avatar red_border" src="img/avatar/4.jpg" alt="Avatar 4" /></div>
-    <div><img class="avatar" src="img/avatar/5.jpg" alt="Avatar 5" /></div>
+    <div><a href='#user_1'><img class="avatar red_border" src="img/avatar/1.jpg" alt="Avatar 1" /></a></div>
+    <div><a href='#user_2'><img class="avatar red_border" src="img/avatar/2.jpg" alt="Avatar 2" /></a></div>
+    <div><a href='#user_3'><img class="avatar red_border" src="img/avatar/3.jpg" alt="Avatar 3" /></a></div>
+    <div><a href='#user_4'><img class="avatar red_border" src="img/avatar/4.jpg" alt="Avatar 4" /></a></div>
+    <div><a href='#user_5'><img class="avatar red_border" src="img/avatar/5.jpg" alt="Avatar 5" /></a></div>
   </nav>
 
   <article>
     <section class="username">
-      <img class="avatar" src="img/avatar/1.jpg" alt="Avatar 1" />
+      <a name='user_1' href='#'><img class="avatar" src="img/avatar/1.jpg" alt="Avatar 1" /></a>
       <div><span class="nick">viajante88</span><br />Laos</div>
     </section>
     <section class="photo">
@@ -48,9 +50,74 @@
     </section>
   </article>
 
-  <aside></aside>
 
-  <footer></footer>
+  <article>
+    <section class="username">
+      <a name='user_2' href='#'><img class="avatar" src="img/avatar/2.jpg" alt="Avatar 2" /></a>
+      <div><span class="nick">viajante88</span><br />Laos</div>
+    </section>
+    <section class="photo">
+      <img width=100% src="img/photo/2.jpg" alt="" />
+    </section>
+    <section class="test">Iconos</section>
+    <section class="test">Comentarios</section>
+    <section class="test">TextArea</textarea>
+    </section>
+  </article>
+
+  <article>
+    <section class="username">
+      <a name='user_3' href='#'><img class="avatar" src="img/avatar/3.jpg" alt="Avatar 3" /></a>
+      <div><span class="nick">viajante88</span><br />Laos</div>
+    </section>
+    <section class="photo">
+      <img width=100% src="img/photo/3.jpg" alt="" />
+    </section>
+    <section class="test">Iconos</section>
+    <section class="test">Comentarios</section>
+    <section class="test">TextArea</textarea>
+    </section>
+  </article>
+
+  <article>
+    <section class="username">
+      <a name='user_4' href='#'><img class="avatar" src="img/avatar/4.jpg" alt="Avatar 4" /></a>
+      <div><span class="nick">viajante88</span><br />Laos</div>
+    </section>
+    <section class="photo">
+      <img width=100% src="img/photo/4.jpg" alt="" />
+    </section>
+    <section class="test">Iconos</section>
+    <section class="test">Comentarios</section>
+    <section class="test">TextArea</textarea>
+    </section>
+  </article>
+
+  <article>
+    <section class="username">
+      <a name='user_5' href='#'><img class="avatar" src="img/avatar/5.jpg" alt="Avatar 5" /></a>
+      <div><span class="nick">viajante88</span><br />Laos</div>
+    </section>
+    <section class="photo">
+      <img width=100% src="img/photo/5.jpg" alt="" />
+    </section>
+    <section class="test">Iconos</section>
+    <section class="test">Comentarios</section>
+    <section class="test">TextArea</textarea>
+    </section>
+  </article>
+
+  <aside>
+   
+  </aside>
+
+  <script language='javascript'>
+    aside = document.querySelector('aside');
+    aside.addEventListener("click", function () { aside.remove() });
+  </script>
+
+  <footer>FOOTER</footer>
+
 </body>
 
 </html>
