@@ -4,4 +4,8 @@ nav
     border: solid 0.15rem rgb(221, 221, 221);
     background-color: white;
     height:7rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

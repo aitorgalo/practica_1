@@ -45,11 +45,6 @@ header .emojis{
 height:2rem;
   }
 
-  .ocultar
-  {
-    display:none;
-  }
-
   header .emojis{
     font-size:1rem;
     text-align:right;

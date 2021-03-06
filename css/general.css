@@ -10,17 +10,25 @@ body {
 .avatar {
   height: 4rem;
   vertical-align: middle;
-  padding:0.1rem;
+  padding: 0.1rem;
 }
 
-.avatar{
+.avatar {
   height: 4rem;
   border-radius: 4rem;
+}
+
+.mini {
+  height: 2rem;
+}
+
+.red_border
+{
   border: 0.25rem solid #ec4731;
   box-shadow: 0 0 0 0.1rem #8b2323;
 }
 
-.avatar:hover {
+.red_border:hover{
   border: 0.25rem solid #eb8e37;
 }
 
@@ -33,5 +41,13 @@ body {
 
   .avatar:hover {
     border: 0.2rem solid #eb8e37;
+  }
+
+  .mini {
+    height: 1rem;
+  }
+
+  .ocultar {
+    display: none;
   }
 }
