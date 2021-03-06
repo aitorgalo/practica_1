@@ -22,13 +22,12 @@ body {
   height: 2rem;
 }
 
-.red_border
-{
+.red_border {
   border: 0.25rem solid #ec4731;
   box-shadow: 0 0 0 0.1rem #8b2323;
 }
 
-.red_border:hover{
+.red_border:hover {
   border: 0.25rem solid #eb8e37;
 }
 
