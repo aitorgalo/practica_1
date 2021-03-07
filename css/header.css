@@ -8,10 +8,6 @@ header {
   overflow: auto;
 }
 
-header span {
-  text-align: center;
-}
-
 header input {
   width: 25%;
   height: 2rem;
@@ -32,6 +28,12 @@ header .item {
 
 header .emojis{
   font-size:1.5rem;
+  text-align:right;
+  padding-right:0.5rem;
+}
+
+header .emojis:hover{
+  cursor:pointer;
 }
 
 @media (max-width: 479px) {
@@ -43,12 +45,6 @@ header .emojis{
 
   header {
 height:2rem;
-  }
-
-  header .emojis{
-    font-size:1rem;
-    text-align:right;
-    padding-right:0.5rem;
   }
 
 }

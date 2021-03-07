@@ -1,10 +1,25 @@
 body {
   background-color: rgb(240, 240, 240);
-  margin: 0;
+
+  /* Extraído de https://designers.hubspot.com/docs/snippets/design/centering-your-website-using-max-width-and-auto-margins para responsive */
+  max-width: 1080px;
+  margin: 0 auto;
+  float: none;
 }
 
 .nick {
   font-weight: bold;
+}
+
+.right
+{
+  text-align:right;
+  padding-right:0.5rem;
+}
+
+.center
+{
+  text-align:center;
 }
 
 .avatar {
