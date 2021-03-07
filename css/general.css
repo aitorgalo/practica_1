@@ -11,15 +11,13 @@ body {
   font-weight: bold;
 }
 
-.right
-{
-  text-align:right;
-  padding-right:0.5rem;
+.right {
+  text-align: right;
+  padding-right: 0.5rem;
 }
 
-.center
-{
-  text-align:center;
+.center {
+  text-align: center;
 }
 
 .avatar {
@@ -44,6 +42,22 @@ body {
 
 .red_border:hover {
   border: 0.25rem solid #eb8e37;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
 
 @media (max-width: 479px) {

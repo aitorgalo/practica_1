@@ -16,3 +16,17 @@ article .username {
 section div {
   padding-left: 0.5rem;
 }
+
+.comment
+{
+  border: solid 0 white;
+  width:70%;
+}
+
+.corazon:hover{
+  cursor: pointer;
+}
+
+.corazon{
+  font-size:1.5rem;
+}

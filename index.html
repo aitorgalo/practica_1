@@ -17,7 +17,6 @@
 
 <body>
 
-
   <div class='container'>
 
     <header>
@@ -28,8 +27,8 @@
       <span class="item center ocultar">
         <input type="text" name="searcher" id="searcher" value="Buscar ..." />
       </span>
-      <span class="item right emojis"> <span class='ocultar'>🏚️ <span id='messages'>✉️</span></span> <img
-          class="avatar mini" src="img/avatar/0.jpg" alt="Avatar 0" /></span>
+      <span class="item right emojis"> <span class='ocultar'><a href='#'>🏚️</a> <span id='messages'>✉️</span></span>
+        <img class="avatar mini" src="img/avatar/0.jpg" alt="Avatar 0" /></span>
     </header>
 
     <nav>
@@ -43,14 +42,28 @@
     <article>
       <section class="username">
         <a name='user_1' href='#'><img class="avatar" src="img/avatar/1.jpg" alt="Avatar 1" /></a>
-        <div><span class="nick">viajante88</span><br />Laos</div>
+        <div><span class="nick">viajante88</span><br />Lago Taal, Filipinas</div>
       </section>
       <section class="photo">
-        <img width=100% src="img/photo/1.jpg" alt="" />
+        <a href='img/photo/1.jpg' target='_blank'><img width=100% src="img/photo/1.jpg" alt="" /></a>
       </section>
-      <section class="test">Iconos</section>
-      <section class="test">Comentarios</section>
-      <section class="test">TextArea</textarea>
+      <section class="test"><span class='corazon'>💗</span></section>
+      <section class="test"><span class="nick">viajante88</span> Yo quiero ser llorando el hortelano
+        de la tierra que ocupas y estercolas,
+        compañero del alma, tan temprano.
+
+        Alimentando lluvias, caracolas
+        y órganos mi dolor sin instrumento,
+        a las desalentadas amapolas
+
+        daré tu corazón por alimento.
+        Tanto dolor se agrupa en mi costado,
+        que por doler me duele hasta el aliento.
+
+        Un manotazo duro, un golpe helado,
+        un hachazo invisible y homicida,
+        un empujón brutal te ha derribado.</section>
+      <section class="test">😄<input class='comment' type="text" value="Añade un comentario..." /></textarea>
       </section>
     </article>
 
@@ -58,12 +71,12 @@
     <article>
       <section class="username">
         <a name='user_2' href='#'><img class="avatar" src="img/avatar/2.jpg" alt="Avatar 2" /></a>
-        <div><span class="nick">viajante88</span><br />Laos</div>
+        <div><span class="nick">estoico99</span><br />Milford Sound, Nueva Zelanda</div>
       </section>
       <section class="photo">
         <img width=100% src="img/photo/2.jpg" alt="" />
       </section>
-      <section class="test">Iconos</section>
+      <section class="test"><span class='corazon'>💗</span></section>
       <section class="test">Comentarios</section>
       <section class="test">TextArea</textarea>
       </section>
@@ -72,12 +85,12 @@
     <article>
       <section class="username">
         <a name='user_3' href='#'><img class="avatar" src="img/avatar/3.jpg" alt="Avatar 3" /></a>
-        <div><span class="nick">viajante88</span><br />Laos</div>
+        <div><span class="nick">susurro46</span><br />Ouzoud, Marruecos</div>
       </section>
       <section class="photo">
         <img width=100% src="img/photo/3.jpg" alt="" />
       </section>
-      <section class="test">Iconos</section>
+      <section class="test"><span class='corazon'>💗</span></section>
       <section class="test">Comentarios</section>
       <section class="test">TextArea</textarea>
       </section>
@@ -86,12 +99,12 @@
     <article>
       <section class="username">
         <a name='user_4' href='#'><img class="avatar" src="img/avatar/4.jpg" alt="Avatar 4" /></a>
-        <div><span class="nick">viajante88</span><br />Laos</div>
+        <div><span class="nick">caminante29</span><br />Laguna Roja, Chile</div>
       </section>
       <section class="photo">
         <img width=100% src="img/photo/4.jpg" alt="" />
       </section>
-      <section class="test">Iconos</section>
+      <section class="test"><span class='corazon'>💗</span></section>
       <section class="test">Comentarios</section>
       <section class="test">TextArea</textarea>
       </section>
@@ -100,12 +113,12 @@
     <article>
       <section class="username">
         <a name='user_5' href='#'><img class="avatar" src="img/avatar/5.jpg" alt="Avatar 5" /></a>
-        <div><span class="nick">viajante88</span><br />Laos</div>
+        <div><span class="nick">believer19</span><br />Shinjuku Gyoen, Tokyo</div>
       </section>
       <section class="photo">
         <img width=100% src="img/photo/5.jpg" alt="" />
       </section>
-      <section class="test">Iconos</section>
+      <section class="test"><span class='corazon'>💗</span></section>
       <section class="test">Comentarios</section>
       <section class="test">TextArea</textarea>
       </section>
@@ -123,12 +136,26 @@
     </aside>
 
     <script language='javascript'>
+
+      // Asside
       messages = document.getElementById('messages');
       aside = document.querySelector('aside');
-      aside.style.visibility = "hidden"; 
+      aside.style.visibility = "hidden";
+      aside.addEventListener("click", function () { aside.style.visibility = "hidden"; });
+      messages.addEventListener("click", function () { aside.style.visibility = "visible"; })
 
-      aside.addEventListener("click", function () { aside.style.visibility = "hidden";   });
-      messages.addEventListener("click", function () { aside.style.visibility = "visible";  })
+      // Corazon
+      corazones = document.getElementsByClassName('corazon');
+      for (let i = 0; i < corazones.length; i++) {
+        corazones.item(i).addEventListener("click", function (event) { 
+         
+          if( event.target.innerHTML == "💗")
+          event.target.innerHTML = "💖";
+          else
+          event.target.innerHTML = "💗";
+        
+        })
+      }
 
     </script>
 
