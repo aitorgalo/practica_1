@@ -1,5 +1,5 @@
 article {
-  margin: 1rem 7% 0 7%;
+  margin: 1rem 7% 1rem 7%;
   border: solid 0.15rem rgb(221, 221, 221);
   background-color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -13,13 +13,16 @@ article .username {
   align-items: center;
 }
 
-section div {
-  padding-left: 0.5rem;
+section {
+  margin: 0.25rem;
+}
+.photo {
+  margin: 0;
 }
 
 .comment {
   border: solid 0 white;
-  width: 70%;
+  width: 80%;
 }
 
 .corazon {

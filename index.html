@@ -46,7 +46,7 @@
       <a href='img/photo/1.jpg' target='_blank'><img width=100% src="img/photo/1.jpg" alt="" /></a>
     </section>
     <section><span class='corazon'>💗</span></section>
-    <section><span class="nick">viajante88</span> Yo quiero ser llorando el hortelano
+    <section id='description_1'><span class="nick">viajante88</span> Yo quiero ser llorando el hortelano
       de la tierra que ocupas y estercolas,
       compañero del alma, tan temprano.
 
@@ -61,7 +61,7 @@
       Un manotazo duro, un golpe helado,
       un hachazo invisible y homicida,
       un empujón brutal te ha derribado.</section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
+    <section>😄<input class='comment' id='comment_1' type="text" value="Añade un comentario..." /></section>
   </article>
 
   <article>
@@ -73,7 +73,7 @@
       <a href='img/photo/2.jpg' target='_blank'><img width=100% src="img/photo/2.jpg" alt="" /></a>
     </section>
     <section><span class='corazon'>💗</span></section>
-    <section><span class="nick">estoico99</span>
+    <section id='description_2'><span class="nick">estoico99</span>
       No hay extensión más grande que mi herida,
       lloro mi desventura y sus conjuntos
       y siento más tu muerte que mi vida.
@@ -90,7 +90,7 @@
       no perdono a la vida desatenta,
       no perdono a la tierra ni a la nada.
     </section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
+    <section>😄<input class='comment' id='comment_2' type="text" value="Añade un comentario..." /></section>
     </section>
   </article>
 
@@ -103,7 +103,7 @@
       <a href='img/photo/3.jpg' target='_blank'><img width=100% src="img/photo/3.jpg" alt="" /></a>
     </section>
     <section><span class='corazon'>💗</span></section>
-    <section><span class="nick">susurro46</span>
+    <section id='description_3'><span class="nick">susurro46</span>
       En mis manos levanto una tormenta
       de piedras, rayos y hachas estridentes
       sedienta de catástrofes y hambrienta.
@@ -119,10 +119,8 @@
       Volverás a mi huerto y a mi higuera:
       por los altos andamios de las flores
       pajareará tu alma colmenera.
-
-
     </section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
+    <section>😄<input class='comment' id='comment_3' type="text" value="Añade un comentario..." /></section>
   </article>
 
   <article>
@@ -134,7 +132,7 @@
       <a href='img/photo/4.jpg' target='_blank'><img width=100% src="img/photo/4.jpg" alt="" /></a>
     </section>
     <section><span class='corazon'>💗</span></section>
-    <section><span class="nick">caminante29</span>
+    <section id='description_4'><span class="nick">caminante29</span>
       Volverás al arrullo de las rejas
       de los enamorados labradores.
 
@@ -146,7 +144,7 @@
       llama a un campo de almendras espumosas
       mi avariciosa voz de enamorado.
     </section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
+    <section>😄<input id='comment_4' class='comment' type="text" value="Añade un comentario..." /></section>
   </article>
 
   <article>
@@ -158,7 +156,7 @@
       <a href='img/photo/5.jpg' target='_blank'><img width=100% src="img/photo/5.jpg" alt="" /></a>
     </section>
     <section><span class='corazon'>💗</span></section>
-    <section><span class="nick">believer19</span>
+    <section id='description_5'><span class="nick">believer19</span>
       Me gustas cuando callas porque estás como ausente,
       y me oyes desde lejos, y mi voz no te toca.
       Parece que los ojos se te hubieran volado
@@ -174,9 +172,9 @@
       Y me oyes desde lejos, y mi voz no te alcanza:
       déjame que me calle con el silencio tuyo.
     </section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
+    <section>😄<input id='comment_5' class='comment' type="text" value="Añade un comentario..." /></section>
   </article>
-
+<br>
   <aside class='collapsed'>
     ✉️
     <div>
@@ -188,57 +186,9 @@
     </div>
   </aside>
 
-  <script language='javascript'>
+  <footer>Copyright Aitor Garzón López | Fakestagram © Todos los derechos reservados</footer>
 
-    // Asside Nuevo Mensaje
-    messages = document.getElementById('messages');
-    aside = document.querySelector('aside');
-    aside.style.visibility = "hidden";
-    aside.addEventListener("click", function () { aside.style.visibility = "hidden"; });
-    messages.addEventListener("click", function () {
-      aside.style.visibility = "visible";
-    })
-
-    // Corazon
-    corazones = document.getElementsByClassName('corazon');
-    for (let i = 0; i < corazones.length; i++) {
-      corazones.item(i).addEventListener("click", function (event) {
-
-        // Cambiar corazón
-        if (event.target.innerHTML == "💗")
-          event.target.innerHTML = "💖";
-        else
-          event.target.innerHTML = "💗";
-
-      })
-    }
-
-    // Vaciar Textbox
-    inputs = document.getElementsByTagName('input');
-    for (let i = 0; i < inputs.length; i++) {
-
-      // Vaciar Texto
-      inputs.item(i).addEventListener("click", function (event) {
-        event.target.value = '';
-      })
-
-      // Pierde Focus
-      inputs.item(i).addEventListener("focusout", function (event) {
-
-        if (event.target.value == '') {
-
-          if (event.target.classList.contains("comment"))
-            event.target.value = "Añade un comentario...";
-          else {
-            event.target.value = "Buscar ...";
-          }
-        }
-      })
-    }
-
-  </script>
-
-  <footer>FOOTER</footer>
+<script src="js/actions.js"></script>
 
 </body>
 
