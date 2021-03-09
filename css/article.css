@@ -20,6 +20,10 @@ section {
   margin: 0;
 }
 
+section
+{
+  text-align:justify;
+}
 .comment {
   border: solid 0 white;
   width: 90%;
