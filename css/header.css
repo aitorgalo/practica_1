@@ -1,17 +1,16 @@
 header {
   display: flex;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   height: 4.5rem;
   border-bottom: solid 0.15rem rgb(221, 221, 221);
   background-color: white;
   align-items: center;
   justify-content: center;
   overflow: auto;
-
 }
 
 header input {

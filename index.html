@@ -61,7 +61,7 @@
       Un manotazo duro, un golpe helado,
       un hachazo invisible y homicida,
       un empujón brutal te ha derribado.</section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></textarea></section>
+    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
   </article>
 
   <article>
@@ -70,7 +70,7 @@
       <div><span class="nick">estoico99</span><br />Milford Sound, Nueva Zelanda</div>
     </section>
     <section class="photo">
-      <img width=100% src="img/photo/2.jpg" alt="" />
+      <a href='img/photo/2.jpg' target='_blank'><img width=100% src="img/photo/2.jpg" alt="" /></a>
     </section>
     <section><span class='corazon'>💗</span></section>
     <section><span class="nick">estoico99</span>
@@ -90,7 +90,7 @@
       no perdono a la vida desatenta,
       no perdono a la tierra ni a la nada.
     </section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></textarea></section>
+    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
     </section>
   </article>
 
@@ -100,7 +100,7 @@
       <div><span class="nick">susurro46</span><br />Ouzoud, Marruecos</div>
     </section>
     <section class="photo">
-      <img width=100% src="img/photo/3.jpg" alt="" />
+      <a href='img/photo/3.jpg' target='_blank'><img width=100% src="img/photo/3.jpg" alt="" /></a>
     </section>
     <section><span class='corazon'>💗</span></section>
     <section><span class="nick">susurro46</span>
@@ -122,7 +122,7 @@
 
 
     </section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></textarea></section>
+    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
   </article>
 
   <article>
@@ -131,7 +131,7 @@
       <div><span class="nick">caminante29</span><br />Laguna Roja, Chile</div>
     </section>
     <section class="photo">
-      <img width=100% src="img/photo/4.jpg" alt="" />
+      <a href='img/photo/4.jpg' target='_blank'><img width=100% src="img/photo/4.jpg" alt="" /></a>
     </section>
     <section><span class='corazon'>💗</span></section>
     <section><span class="nick">caminante29</span>
@@ -146,7 +146,7 @@
       llama a un campo de almendras espumosas
       mi avariciosa voz de enamorado.
     </section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></textarea></section>
+    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
   </article>
 
   <article>
@@ -155,7 +155,7 @@
       <div><span class="nick">believer19</span><br />Shinjuku Gyoen, Tokyo</div>
     </section>
     <section class="photo">
-      <img width=100% src="img/photo/5.jpg" alt="" />
+      <a href='img/photo/5.jpg' target='_blank'><img width=100% src="img/photo/5.jpg" alt="" /></a>
     </section>
     <section><span class='corazon'>💗</span></section>
     <section><span class="nick">believer19</span>
@@ -174,7 +174,7 @@
       Y me oyes desde lejos, y mi voz no te alcanza:
       déjame que me calle con el silencio tuyo.
     </section>
-    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></textarea></section>
+    <section>😄<input class='comment' type="text" value="Añade un comentario..." /></section>
   </article>
 
   <aside class='collapsed'>
@@ -215,7 +215,7 @@
 
     // Vaciar Textbox
     inputs = document.getElementsByTagName('input');
-    for (let i = 0; i < corazones.length; i++) {
+    for (let i = 0; i < inputs.length; i++) {
 
       // Vaciar Texto
       inputs.item(i).addEventListener("click", function (event) {
@@ -232,13 +232,8 @@
           else {
             event.target.value = "Buscar ...";
           }
-
-
         }
-
-
       })
-
     }
 
   </script>

@@ -1,27 +1,22 @@
-nav
-{
-    display: flex;
-    align-items: center;
+nav {
+  display: flex;
+  align-items: center;
 
-    margin: 5.5rem 7% 0 7%;
-    border: solid 0.15rem rgb(221, 221, 221);
-    background-color: white;
-    height:6rem;
+  margin: 5.5rem 7% 0 7%;
+  border: solid 0.15rem rgb(221, 221, 221);
+  background-color: white;
+  height: 6rem;
 }
 
-nav div
-{
-    flex:auto;
-    text-align:center;
+nav div {
+  flex: auto;
+  text-align: center;
 }
-
 
 @media (max-width: 479px) {
-
-nav{
-    height:3.5rem;
-    font-size:0.6rem;
-    margin-top:3rem;
-}
-
+  nav {
+    height: 3.5rem;
+    font-size: 0.6rem;
+    margin-top: 3rem;
+  }
 }
