@@ -1,5 +1,5 @@
-// Extraído de https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", () => {
+
   // Asside Nuevo Mensaje
   messages = document.getElementById("messages");
   aside = document.querySelector("aside");
@@ -52,12 +52,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
           document.getElementById(
             this.id.replace("comment", "description")
           ).innerHTML +=
-            "<br>" +
-            `<span class="nick">aitorgalo</span> ` +
-            this.value;
+            "<br>" + `<span class="nick">aitorgalo</span> ` + this.value;
           this.value = "";
         }
       });
     }
   }
+
 });
