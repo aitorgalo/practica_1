@@ -1,8 +1,5 @@
-// Para que se active al cargar toda la página
-window.addEventListener("DOMContentLoaded", () => {
-  // Asside Revisar Nuevo Mensaje Recibido
-  messages = document.getElementById("messages");
-  aside = document.querySelector("aside");
+// Cambio Visibilidad Asside
+function assideVisibility(messages, aside) {
   aside.style.visibility = "hidden";
   aside.addEventListener("click", function () {
     aside.style.visibility = "hidden";
@@ -10,9 +7,10 @@ window.addEventListener("DOMContentLoaded", () => {
   messages.addEventListener("click", function () {
     aside.style.visibility = "visible";
   });
+}
 
-  // Corazon Like
-  corazones = document.getElementsByClassName("corazon");
+// Cambio Corazones
+function heartAction(corazones) {
   for (let i = 0; i < corazones.length; i++) {
     corazones.item(i).addEventListener("click", function (event) {
       // Cambiar corazón
@@ -20,9 +18,10 @@ window.addEventListener("DOMContentLoaded", () => {
       else this.innerHTML = "💗";
     });
   }
+}
 
-  // Acciones Textbox
-  inputs = document.getElementsByTagName("input");
+// Vaciar y Rellenar Textbox
+function textBoxAction(inputs) {
   for (let i = 0; i < inputs.length; i++) {
     // Get Input
     input = inputs.item(i);
@@ -41,8 +40,9 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+}
 
-  // Acciones Form
+function formAction() {
   for (let i = 0; i < document.forms.length; i++) {
     // Busco Form
     form = document.forms[i];
@@ -52,68 +52,60 @@ window.addEventListener("DOMContentLoaded", () => {
       // Para no hacer el submit
       event.preventDefault();
 
-      // Obtener post
-      post = document.getElementById(this.id.replace("form", "description"));
-      // Obtener comentario
-      comment = document.getElementById(this.id.replace("form", "comment"));
-
-      // Si tengo algún comentario a añadir
-      if (comment.value != "") {
-        // Salto de Línea
-        post.appendChild(document.createElement("br"));
-
-        // Nick
-        nick = document.createElement("span");
-        nick.classList.add("nick");
-        nick.innerHTML = "aitorgalo";
-        post.appendChild(nick);
-
-        // Comentario
-        newcomment = document.createElement("span");
-        newcomment.innerHTML = ` ${comment.value}`;
-        post.appendChild(newcomment);
+      // Searcher
+      if (this.id === "searcher") {
+        // Buscar imágen (sería en la propia web cuándo tengamos base de datos, de momento pongo google)
+        window.open(
+          "http://google.es/search?tbm=isch&q=" + this.lastChild.value,
+          "_blank"
+        );
       }
-      else
-      {
-        alert('Añade algún comentario por favor.')
-      }
+      // Comment
+      else {
+        // Obtener post
+        post = document.getElementById(this.id.replace("form", "description"));
+        // Obtener comentario
+        comment = document.getElementById(this.id.replace("form", "comment"));
 
-      // Vacío Textbox
-      comment.value = "";
-    });
-  }
-
-  // Add Comment
-  if (input.classList.contains("comment")) {
-    /*
-
-      // Evento Enter, extraído de https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
-      input.addEventListener("keyup", function (event) {
-        // Number 13 is the "Enter" key on the keyboard
-        if (event.keyCode === 13) {
-          // Obtener comentario
-          comments = document.getElementById(
-            this.id.replace("comment", "description")
-          );
+        // Si tengo algún comentario a añadir
+        if (comment.value != "") {
           // Salto de Línea
-          comments.appendChild(document.createElement("br"));
-
+          post.appendChild(document.createElement("br"));
           // Nick
           nick = document.createElement("span");
           nick.classList.add("nick");
           nick.innerHTML = "aitorgalo";
-          comments.appendChild(nick);
+          post.appendChild(nick);
 
           // Comentario
-          comment = document.createElement("span");
-          comment.innerHTML = ` ${this.value}`;
-          comments.appendChild(comment);
-
-          // Vacío Textbox
-          this.value = "";
+          newcomment = document.createElement("span");
+          newcomment.innerHTML = ` ${comment.value}`;
+          post.appendChild(newcomment);
+        } else {
+          console.log("Sin comentarios...");
         }
-      });
 
-*/
+        // Vacío Textbox
+        comment.value = "";
+      }
+    });
   }
+}
+
+// Para que se active al cargar toda la página
+window.addEventListener("DOMContentLoaded", () => {
+  // Set Asside Visibility
+  assideVisibility(
+    document.getElementById("messages"),
+    document.querySelector("aside")
+  );
+
+  // Corazon Like
+  heartAction(document.getElementsByClassName("corazon"));
+
+  // Acciones Textbox
+  textBoxAction(document.getElementsByTagName("input"));
+
+  // Acciones Form
+  formAction();
 });
